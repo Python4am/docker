@@ -1,7 +1,8 @@
 # jksb_sysu_docker
-本仓库基于[jksb_sysu](https://github.com/tomatoF/jksb_sysu "中山大学健康傻逼")，将其使用docker部署。
+本仓库基于[jksb_sysu](https://github.com/tomatoF/jksb_sysu "中山大学健康傻逼")，将其使用docker部署。目前仅在linux上进行了测试。
 ## 使用方法：
-首先需要编写config.json。将仓库内给出的config.json保存到物理机上，并修改对应参数。
+首先需要编写config.json。将仓库内给出的config.json保存到物理机上，并按如下注释修改相应的参数。
+<br>**以下代码段中的注释仅为方便使用者理解而给出，实际使用请删除注释，否则程序将无法正常运行！**
 ```json
 [
     {
@@ -22,7 +23,7 @@
 ```docker
 docker pull quinv33/sysu_jksb:latest
 ```
-拉取完成后，按如下命令运行容器，注意需要将/root/config.json改成相应存放位置。
+拉取完成后，按如下命令运行容器，注意需要将/root/config.json改成配置文件的相应存放位置。
 ```docker
 docker run -d -v /root/config.json:/config.json quinv33/sysu_jksb:latest 
 ```
