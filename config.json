@@ -1,0 +1,14 @@
+[
+    {
+        "username": "user1",
+        "password": "pass",
+        "mail_host": "smtp.qq.com",
+        "mail_user":"xx@qq.com",
+        "mail_token": "token",
+        "mail_receiver": "receiver@qq.com"
+    },
+    {
+        "username": "user2",
+        "password": "pass"
+    }
+]
