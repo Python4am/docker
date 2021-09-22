@@ -6,7 +6,7 @@
 ```json
 [
     {
-        "methond": "sckey", # 此处输入sckey将使用sckey方式推送信息，如果输入email则发送email，输入tgbot则(未实现)
+        "method": "sckey", # 此处输入sckey将使用sckey方式推送信息，如果输入email则发送email，输入tgbot则(未实现)
         "username": "user1", # netid
         "password": "pass", # netid密码
         "mail_host": "smtp.qq.com", #发送邮件使用的smtp服务器，若使用sckey方法可以留空
