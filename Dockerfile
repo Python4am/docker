@@ -1,8 +1,5 @@
-FROM ubuntu:bionic
+FROM multiarch/ubuntu-debootstrap:armhf-bionic
 LABEL maintainer="QuinV"
-ENV LANG     zh_CN.UTF-8
-ENV LANGUAGE zh_CN.UTF-8
-ENV LC_ALL   zh_CN.UTF-8
 RUN mkdir /root/.pip && sed -i s@/security.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list  && sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list && apt-get clean
 COPY /pip.conf /root/.pip/pip.conf
 RUN apt-get update && \
