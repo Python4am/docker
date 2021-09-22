@@ -1,17 +1,19 @@
 # jksb_sysu_docker
-本仓库基于[jksb_sysu](https://github.com/tomatoF/jksb_sysu "中山大学健康傻逼")，将其使用docker部署。目前仅在linux上进行了测试。
+本仓库基于[jksb_sysu](https://github.com/tomatoF/jksb_sysu "中山大学健康傻逼")的实现，将其使用docker部署。目前仅在x86_linux上进行了测试。
 ## 使用方法：
 首先需要编写config.json。将仓库内给出的config.json保存到物理机上，并按如下注释修改相应的参数。
 <br>**以下代码段中的注释仅为方便使用者理解而给出，实际使用请删除注释，否则程序将无法正常运行！**
 ```json
 [
     {
+        "methond": "sckey", # 此处输入sckey将使用sckey方式推送信息，如果输入email则发送email，输入tgbot则(未实现)
         "username": "user1", # netid
         "password": "pass", # netid密码
-        "mail_host": "smtp.qq.com", #发送邮件使用的smtp服务器
-        "mail_user":"xx@qq.com", #发送邮件的邮箱地址
-        "mail_token": "token", #密码/特定的token
-        "mail_receiver": "receiver@qq.com" #接收申报结果的邮箱
+        "mail_host": "smtp.qq.com", #发送邮件使用的smtp服务器，若使用sckey方法可以留空
+        "mail_user":"xx@qq.com", #发送邮件的邮箱地址，若使用sckey方法可以留空
+        "mail_token": "token", #密码/特定的token，若使用sckey方法可以留空
+        "mail_receiver": "receiver@qq.com", #接收申报结果的邮箱，若使用sckey方法可以留空
+        "wxsend_key":"" #server酱申请到的send_key，若使用email方法可以留空
     },
     {
         "username": "user2",
