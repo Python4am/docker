@@ -27,6 +27,6 @@ docker pull quinv33/sysu_jksb:latest
 ```
 拉取完成后，按如下命令运行容器，注意需要将/root/config.json改成配置文件的相应存放位置。
 ```docker
-docker run -d -v /root/config.json:/config.json quinv33/sysu_jksb:latest 
+docker run -id -v /root/config.json:/config.json quinv33/sysu_jksb:latest 
 ```
 容器内tzdata已调节为北京时区。容器正常运行后会在每天早上7:30准时进行申报，并发送邮件告知申报结果。
