@@ -1,5 +1,6 @@
 # jksb_sysu_docker
 本仓库基于[jksb_sysu](https://github.com/tomatoF/jksb_sysu "中山大学健康傻逼")的实现，将其使用docker部署。目前仅在x86_linux上进行了测试。
+**树莓派版本镜像仍在测试中，并未证实可以部署，请谨慎使用，避免被智*院通报批评**
 ## 使用方法：
 首先需要编写config.json。将仓库内给出的config.json保存到物理机上，并按如下注释修改相应的参数。
 <br>**以下代码段中的注释仅为方便使用者理解而给出，实际使用请删除注释，否则程序将无法正常运行！**
@@ -21,7 +22,7 @@
     }
 ]
 ```
-假设此config.json保存在/root/目录下。随后，拉取申报镜像。
+假设此config.json保存在/root/目录下。随后，拉取申报镜像。**如果在树莓派上部署请将latest改成raspi,启动命令同理**
 ```docker
 docker pull quinv33/sysu_jksb:latest
 ```
@@ -30,3 +31,4 @@ docker pull quinv33/sysu_jksb:latest
 docker run -id -v /root/config.json:/config.json quinv33/sysu_jksb:latest 
 ```
 容器内tzdata已调节为北京时区。容器正常运行后会在每天早上7:30准时进行申报，并发送邮件告知申报结果。
+
