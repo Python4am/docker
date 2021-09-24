@@ -14,7 +14,6 @@ RUN apt-get update && \
     rm -rf /usr/bin/python3 && ln -s /usr/bin/python3.8 /usr/bin/python3 && \ 
     git config --global url."https://hub.fastgit.org/".insteadOf "https://github.com/" && \
     git clone https://github.com/QuinV33/jksb_sysu && \
-    touch /jksb.log && \
     echo "30 7 * * *  python3 /jksb_sysu/jksb_sysu.py" > /etc/cron.d/jksb && crontab /etc/cron.d/jksb && \
     python3 -m pip install -U --no-cache-dir  pip setuptools && \
     cd jksb_sysu && chmod +x geckodriver && \
