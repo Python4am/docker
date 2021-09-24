@@ -1,5 +1,5 @@
 # jksb_sysu_docker
-首先感谢[@tomatoF](https://github.com/tomatoF).本仓库基于[jksb_sysu](https://github.com/tomatoF/jksb_sysu "中山大学健康傻逼")，将其使用docker部署。目前仅在x86_linux上进行了测试。
+首先感谢[@tomatoF](https://github.com/tomatoF).本项目基于[jksb_sysu](https://github.com/tomatoF/jksb_sysu "中山大学健康傻逼")的成果，将其使用docker部署。目前仅在x86_linux上进行了测试。
 **树莓派版本镜像仍在测试中，并未证实可以部署，请谨慎使用，避免被智*院通报批评**
 ## 使用方法：
 首先需要编写config.json。将仓库内给出的config.json保存到物理机上，并按如下注释修改相应的参数。
