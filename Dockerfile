@@ -1,12 +1,12 @@
 #FROM multiarch/ubuntu-debootstrap:armhf-bionic-slim
 FROM arm64v8/ubuntu:bionic
 LABEL maintainer="QuinV"
-RUN mkdir /root/.pip && sed -i s@/ports.ubuntu.com/@/mirrors.tuna.tsinghua.edu.cn/@g /etc/apt/sources.list && apt-get clean
+RUN mkdir /root/.pip && sed -i s@/ports.ubuntu.com/@/mirrors.tuna.tsinghua.edu.cn/@g /etc/apt/sources.list 
 COPY /pip.conf /root/.pip/pip.conf
 RUN apt-get update && \
     apt-get install -y --no-install-recommends tzdata && ln -fs /usr/share/zoneinfo/Asia/Chongqing /etc/localtime && \
     dpkg-reconfigure -f noninteractive tzdata && \
-    apt-get install -y --no-install-recommends wget python3.8 python3-distutils build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev curl libbz2-dev make automake gcc g++ python3-dev cmake locales firefox git cron  && \
+    apt-get install -y --no-install-recommends ca-certificates wget python3.8 python3-distutils build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev curl libbz2-dev make automake gcc g++ python3-dev cmake locales firefox git cron  && \
     locale-gen zh_CN && \
     locale-gen zh_CN.utf8 && \
 #    cd /usr/local/src && \
@@ -19,10 +19,10 @@ RUN apt-get update && \
 #    make install && cd .. && rm -rf Python* && \
     #rm -rf /usr/bin/python* &&  ln -s /usr/local/python/bin/python3 /usr/bin/python && \
     #which python3.7 && \
-    rm -rf /usr/bin/python3 && ln -s /usr/bin/python3.8 /usr/bin/python3 
+    rm -rf /usr/bin/python3 && ln -s /usr/bin/python3.8 /usr/bin/python3  && \
 #    ln -s /usr/local/python/bin/pip3 /usr/bin/pip && \
 #    ln -s /usr/local/python/bin/pip3 /usr/bin/pip3 && \
-RUN wget --no-check-certificate  https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
+    curl 'https://bootstrap.pypa.io/get-pip.py' > get-pip.py && \
     python3.8 get-pip.py
 
     #wget https://bootstrap.pypa.io/get-pip.py && python3 --no-check-certificate get-pip.py && \
