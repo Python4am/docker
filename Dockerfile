@@ -23,5 +23,5 @@ RUN apt-get update && \
     cd jksb_sysu && chmod +x geckodriver && \
     python3 -m pip install --no-cache-dir -r requirements.txt && \
     apt clean && apt-get autoremove && rm -rf ~/.cache
-WORKDIR /
+WORKDIR / 
 ENTRYPOINT cron &&  /bin/bash   
