@@ -14,9 +14,9 @@ RUN apt-get update && \
     rm -rf /usr/bin/python3 && ln -s /usr/bin/python3.8 /usr/bin/python3 && \ 
     git config --global url."https://hub.fastgit.org/".insteadOf "https://github.com/" && \
     git clone https://github.com/QuinV33/jksb_sysu && \
-    echo "20 8 * * *  python3 /jksb_sysu/jksb_sysu.py" > /etc/cron.d/jksb && \
-    echo "0 9 * * *  python3 /jksb_sysu/checksuccess.py" > /etc/cron.d/jksb && \
-    echo "40 9 * * *  python3 /jksb_sysu/checksuccess.py" > /etc/cron.d/jksb && \
+    echo "20 8 * * *  python3 /jksb_sysu/jksb_sysu.py" >> /etc/cron.d/jksb && \
+    echo "0 9 * * *  python3 /jksb_sysu/checksuccess.py" >> /etc/cron.d/jksb && \
+    echo "40 9 * * *  python3 /jksb_sysu/checksuccess.py" >> /etc/cron.d/jksb && \
     crontab /etc/cron.d/jksb && \
     touch /success.log && \
     python3 -m pip install -U --no-cache-dir  pip setuptools && \
