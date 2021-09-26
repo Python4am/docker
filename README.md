@@ -1,5 +1,5 @@
 # jksb_sysu_docker
-本仓库基于[jksb_sysu](https://github.com/tomatoF/jksb_sysu "中山大学健康傻逼")的实现，将其使用docker部署。目前仅在x86_linux上进行了测试。
+本仓库基于[jksb_sysu](https://github.com/tomatoF/jksb_sysu "中山大学健康傻逼")的实现，将其使用docker部署。目前在x86_64的linux虚拟机、openwrt上进行了测试。
 **树莓派版本镜像仍在测试中，并未证实可以部署，请谨慎使用，避免被智*院通报批评**
 ## 9-26 镜像更新说明：
 近期发现在早上7：30的申报成功率较低，因此改成早上8：20申报一次，并且分别在9：00和9：40检查申报成功与否。
