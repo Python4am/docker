@@ -7,6 +7,7 @@
 ## 使用方法：
 首先需要编写config.json。将仓库内给出的config.json保存到物理机上，并按如下注释修改相应的参数。
 <br>**以下代码段中的注释仅为方便使用者理解而给出，实际使用请删除注释，否则程序将无法正常运行！**
+<br>可选择使用email或者sckey方式进行推送。微信推送方式获取wxsend_key的具体方法可参考https://sct.ftqq.com/sendkey
 ```json
 [
     {
