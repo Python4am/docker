@@ -24,11 +24,7 @@
     }
 ]
 ```
-假设此config.json保存在/root/目录下。随后，拉取申报镜像。**如果在树莓派上部署请将latest改成raspi,启动命令同理**
-```docker
-docker pull quinv33/sysu_jksb:latest
-```
-拉取完成后，按如下命令运行容器，注意需要将/root/config.json改成配置文件的相应存放位置。
+假设此config.json保存在/root/目录下，按如下命令启动并持久化运行容器，注意需要将/root/config.json改成配置文件的相应存放位置。
 ```docker
 docker run -id -v /root/config.json:/config.json quinv33/sysu_jksb:latest 
 ```
