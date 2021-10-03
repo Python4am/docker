@@ -1,6 +1,6 @@
 #FROM multiarch/ubuntu-debootstrap:armhf-bionic-slim
 FROM arm64v8/ubuntu:bionic
-LABEL maintainer="QuinV"
+LABEL maintainer="嘉然今天吃什么"
 RUN mkdir /root/.pip && sed -i s@/ports.ubuntu.com/@/mirrors.tuna.tsinghua.edu.cn/@g /etc/apt/sources.list 
 COPY /pip.conf /root/.pip/pip.conf
 RUN apt-get update && \
