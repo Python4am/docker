@@ -1,5 +1,5 @@
 FROM ubuntu:bionic
-LABEL maintainer="QuinV"
+LABEL maintainer="嘉然今天吃什么"
 ENV LANG     zh_CN.UTF-8
 ENV LANGUAGE zh_CN.UTF-8
 ENV LC_ALL   zh_CN.UTF-8
