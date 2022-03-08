@@ -1,6 +1,6 @@
 # jksb_sysu_docker
 本仓库基于[jksb_sysu](https://github.com/tomatoF/jksb_sysu "中山大学健康傻逼")的实现，将其使用docker部署。目前在x86_64的linux虚拟机、openwrt上进行了测试。
-**树莓派版本镜像仍在测试中，并未证实可以部署，请谨慎使用，避免被智*院通报批评**
+**树莓派版本镜像仍在测试中，并未证实可以部署，请谨慎使用，避免无法运行被智*院通报批评**
 <br>**FUCK YOU, zgb!**
 ## 2022-3-8更新说明：
 鉴于最近中大又开始重视无谓的健康申报，本仓库以及镜像重新开放
@@ -34,5 +34,6 @@
 ```docker
 docker run -id -v /root/config.json:/config.json quinv33/sysu_jksb:latest 
 ```
-容器内tzdata已调节为北京时区。容器正常运行后会在每天早上8：20准时进行申报，并发送邮件告知申报结果。
+想在树莓派上部署的请将latest换为raspi(pi4)或raspi32(pi3)
+<br>容器内tzdata已调节为北京时区。容器正常运行后会在每天早上8：20准时进行申报，并发送邮件告知申报结果。
 
