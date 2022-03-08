@@ -34,6 +34,7 @@
 ```docker
 docker run -id -v /root/config.json:/config.json quinv33/sysu_jksb:latest 
 ```
-想在树莓派上部署的请将latest换为raspi(pi4)或raspi32(pi3)
+想在树莓派4上部署的请将latest换为raspi
+<br>树莓派3则换为raspi32
 <br>容器内tzdata已调节为北京时区。容器正常运行后会在每天早上8：20准时进行申报，并发送邮件告知申报结果。
 
